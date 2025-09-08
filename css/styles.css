@@ -24,9 +24,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-family);
   color: var(--text-color);
   background-color: #f9f9f9;
@@ -144,31 +148,35 @@ footer {
   font-weight: bold;
 }
 
+
+
+.registro-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  padding: 2rem 0;
+  
+  
+}
+
 .formularioRegistro{
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    width: 400px;
+    width: 600px;
+    margin-left: 50px;
     background-color: white;
-    padding: 2rem;
+    padding: 5rem;
     border-radius: var(--border-radius);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    flex-direction: column;
+    gap: 15px;
 }
 
 .formularioRegistro h1{
-    text-align: center;
     padding: 0 0 20px 0;
+    text-align: center;
     border-bottom: 1px solid silver;
-    color: var(--color-btn-primary);
-
-}
-
-.formularioRegistro form{
-    padding: 1rem 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
 }
 
 input{
@@ -177,4 +185,11 @@ input{
     border: 1px solid silver;
     border-radius: var(--border-radius);
     font-size: 1rem;
+}
+
+.formularioRegistro form{
+  padding: 1rem 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
