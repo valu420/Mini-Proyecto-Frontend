@@ -1,71 +1,145 @@
-/* Reset básico */
+/* ==============================
+   global variables
+   ============================== */
+:root {
+  /* Colores principales */
+  --color-header: #DEC7F0;
+  --color-btn-primary: #3F195C;
+  --color-btn-secondary: #702DA4;
+
+  /* Texto */
+  --font-family: 'Arial', sans-serif;
+  --text-color: #333;
+  --text-main-size: 1.2rem;
+  --text-main-weight: 600;
+
+  /* Bordes */
+  --border-radius: 12px;
+}
+
+/* ==============================
+   basic reset
+   ============================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos globales */
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: #f9f9f9;
   line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
 }
 
-/* Header */
+/* ==============================
+   Header
+   ============================== */
 header {
-  background: #0077cc;
-  color: #fff;
-  padding: 1rem;
-}
-
-header nav {
+  background-color: var(--color-header);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
 }
 
-header nav ul {
+header .logo {
   display: flex;
-  list-style: none;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-header nav ul li {
-  margin-left: 1rem;
+header .logo img {
+  width: 40px;
+  height: auto;
 }
 
-header nav ul li a {
-  color: white;
-  text-decoration: none;
+header .logo h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-btn-primary);
 }
 
-/* Hero */
-.hero {
-  padding: 3rem;
-  text-align: center;
-  background: #e6f2ff;
-}
-
-.hero button {
-  margin-top: 1rem;
+/* ==============================
+   global buttoms
+   ============================== */
+button {
   padding: 0.7rem 1.5rem;
-  background: #0077cc;
-  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+  transition: background 0.3s ease;
 }
 
-.hero button:hover {
-  background: #005fa3;
+/* principal buttom */
+.btn-primary {
+  background-color: var(--color-btn-primary);
 }
 
-/* Footer */
+.btn-primary:hover {
+  background-color: #2c1242;
+}
+
+/* secundary buttom */
+.btn-secondary {
+  background-color: var(--color-btn-secondary);
+}
+
+.btn-secondary:hover {
+  background-color: #501c73;
+}
+
+/* ==============================
+   Hero
+   ============================== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 5rem;
+  background-color: #fff;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 0.5;
+  max-width: 50%;
+}
+
+.hero-text h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  max-width: 300px; 
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+/* ==============================
+   Footer
+   ============================== */
 footer {
+  background-color: var(--color-header);
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
-  background: #0077cc;
-  color: #fff;
+  color: var(--color-btn-primary);
+  font-weight: bold;
 }
