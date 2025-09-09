@@ -24,6 +24,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 /* Fondo general */
@@ -40,9 +41,9 @@ body {
 header {
   background-color: var(--color-header);
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  position: relative;
 }
 
 header .logo {
@@ -72,7 +73,7 @@ a.btn-secondary {
   border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #fff;
   text-decoration: none; 
   display: inline-block; 
