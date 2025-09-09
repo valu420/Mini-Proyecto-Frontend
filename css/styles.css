@@ -519,14 +519,14 @@ input{
 
 .recoverPassword h2 {
   text-align: center;
-  padding: 20px 0 20px 0;
+  padding: 20px 0 10px 0;
   border-bottom: 1px solid silver;
 }
 
 .recoverPassword form {
   display: flex;
   flex-direction: column;
-  padding: 20px 40px;
+  padding: 10px 40px;
   gap: 15px;
   padding: 50px;
   
@@ -545,5 +545,5 @@ input{
   border: 1px solid silver;
   border-radius: var(--border-radius);
   font-size: 1rem;
-  background-color: #DEC7F0;
+  background-color: #F3EBFA;
 }
