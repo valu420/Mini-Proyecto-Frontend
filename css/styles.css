@@ -26,11 +26,12 @@
   box-sizing: border-box;
 }
 
+/* Fondo general */
 body {
-  font-family: var(--font-family);
-  color: var(--text-color);
-  background-color: #f9f9f9;
-  line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:  linear-gradient( #ffffff 70%, #e1c8f4 100%);
+  color: #333;
 }
 
 /* ==============================
@@ -100,67 +101,122 @@ a.btn-secondary:hover {
   background-color: #501c73;
 }
 
-.btn-small {
-  padding: 0.4rem 0.5rem;   /* menos espacio interno */
-  font-size: 0.9rem;      /* texto más pequeño */
-  border-radius: 6px;     /* bordes un poco menos redondeados */
-  opacity: 0.9;           /* un poco menos llamativo */
-}
 
-.btn-small:hover {
-  opacity: 1;
-}
 /* ==============================
    Hero
    ============================== */
 .hero {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 3rem 5rem;
-  background-color: #fff;
-  gap: 2rem;
+  justify-content: space-between;
+  padding: 3rem 5%;
+  flex-wrap: wrap;
 }
 
 .hero-text {
-  flex: 0.5;
-  max-width: 50%;
+  flex: 1;
+  min-width: 300px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
 }
 
 .hero-text h2 {
-  font-size: 3rem;
+  font-size: 3rem; /* más grande */
   font-weight: bold;
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #3F195C; /* color base */
+}
+.hero-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
 }
 
-.hero-text p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  line-height: 1.5;
+.hero-text .highlight {
+  background: linear-gradient(90deg, #3F195C, #702DA4);
+   font-style: italic;
 }
 
 .hero-img {
   flex: 1;
   display: flex;
   justify-content: center;
+  animation: fadeInUp 1.5s ease forwards;
 }
 
 .hero-img img {
-  max-width: 300px; 
-  height: auto;
-  border-radius: var(--border-radius);
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
 }
 
-/* ==============================
-   Footer
-   ============================== */
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem auto;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.card {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card i {
+  color: #702DA4;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #3F195C;
+}
+
+
+/* Footer */
 footer {
-  background-color: var(--color-header);
   text-align: center;
   padding: 1rem;
-  color: var(--color-btn-primary);
-  font-weight: bold;
+  background-color: #DEC7F0;
+  margin-top: 2rem;
 }
+
+/* Animaciones */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* estilo de enlaces */
+.link {
+  color: var(--color-btn-secondary); /* usa tu color secundario */
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 0.3rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: #501c73; /* un poco más oscuro en hover */
+}
+
 /* ========================
    LOGIN PAGE
    ======================== */
@@ -169,7 +225,7 @@ footer {
   grid-template-columns: 1fr 1fr;
   min-height: 80vh;
   align-items: center;
-  gap: 2rem;
+  gap: 15px;
   padding: 2rem;
 }
 
@@ -191,8 +247,8 @@ footer {
   width: 100%;
   padding: 0.8rem;
   margin-bottom: 1rem;
-  border: none;
-  border-radius: var(--radius);
+  border: none; /* quité el border mal definido */
+  border-radius: 12px; /* más redondeado (puedes subir a 20px si lo quieres tipo "pill") */
   background-color: #DEC7F0; /* mismo color usado en el header */
   font-size: 1rem;
   color: #000;
@@ -216,8 +272,8 @@ footer {
 
 .login-img img {
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   display: block;
   margin: 0 auto;
-  border-radius: var(--radius); /* mismo radio que las otras imágenes */
+  border-radius: var(--radius); 
 }
